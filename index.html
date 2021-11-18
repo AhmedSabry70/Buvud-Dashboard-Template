@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>buvud dashboard</title>
+    <!-- ________________google font____________________ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <!-- ________________________________icon font ___________________ -->
+    <!-- <link rel="stylesheet" href="css/icofont.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/light.css"> -->
+    <link rel="stylesheet" href="css/all.css">
+    <!-- ___________________style file______________________ -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <header id="navo">
+        <div>
+            <div class="logo">
+                <h2>mylogo</h1>
+            </div>
+            <div onclick="openmenu(this)" class="menu_icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="user_prof">
+            <img src="images/UserAvatar.png" alt="user">
+            <h4>jack williams</h4>
+        </div>
+
+        <nav>
+
+            <ul >
+                <li id="test" class="menu_moretogall" style='cursor: pointer;' > main </li>
+                <li><a href="#"> <i class="fal fa-home"></i>home</a></li>
+                <li><a href="#"> <i class="fal fa-project-diagram"></i>projects</a></li>
+                <li><a href="#"> <i class="fal fa-comment"></i>messages</a></li>
+                <li><a href="#"> <i class="fal fa-analytics"></i>analytics</a></li>
+                <li><a href="#"> <i class="fal fa-tasks-alt"></i>tasks</a></li>
+                <li><a href="#"> <i class="fal fa-calendar-alt"></i>calendar</a></li>
+                <li><a href="#"> <i class="fal fa-qrcode"></i>layouts</a></li>
+                <li><a href="#"> <i class="fas fa-users-cog"></i> accounts</a></li>
+            </ul>
+            <ul >
+                <li class="menu_moretogall">more </li>
+                <li><a href="#"><i class="fal fa-money-check-alt"></i>payments</a></li>
+                <li><a href="#"><i class="fal fa-folder-open"></i>directory</a></li>
+                <li><a href="#"><i class="fal fa-layer-group"></i>library</a></li>
+                <li><a href="#"><i class="fal fa-question-circle"></i>help</a></li>
+
+            </ul>
+        </nav>
+
+    </header>
+    
+    <nav class="navhorz" id="horiznav">
+
+        <div class="search">
+            <form action="">
+                <input type="search" name="search" id="0search" class="search" placeholder="search ..." required>
+            </form>
+        </div>
+        <i title="setting" class="fal fa-cog setting_ico"></i>
+        <i class="fal fa-bell rot"></i>
+        <i class="fal fa-lock"></i>
+    </nav>
+
+
+    <!-- <div class="settinpopbx ">
+        <a href="#"><i class="fal fa-cog setting_ico"></i>settings</a>
+        <a href="#"><i class="far fa-power-off logouti"></i> logout</a>
+    </div> -->
+    <!-- <div class="notificpopbx">
+        <p>notifications</p>
+        <div class="contnotiscor">
+            <a href="#"><i class="fal fa-exclamation-circle erroric"></i>
+                <div>
+                    <h6>application error</h6>
+                    <p>just now</p>
+                </div>
+            </a>
+            <a href="#"><i class="fal fa-cog config"></i>
+                <div>
+                    <h6>settings</h6>
+                    <p>private message</p>
+                </div>
+            </a>
+            <a href="#"><i class="fal fa-user userpic"></i>
+                <div>
+                    <h6>new user registration</h6>
+                    <p>2 days ago</p>
+                </div>
+            </a>
+            <!-- <a href="#"><i  class="fal fa-user userpic"></i><div>
+            <h6>new user registration</h6>
+            <p>2 days ago</p>
+        </div> </a>
+        <a href="#"><i  class="fal fa-user userpic"></i><div>
+            <h6>new user registration</h6>
+            <p>2 days ago</p>
+        </div> </a> -->
+        <!-- </div>
+
+    </div> --> -->
+
+    <!-- <div class="todolist">
+        <h2>to do list</h2>
+
+    </div> -->
+
+
+    <main id="main">
+
+        <div class="box proj_activ">
+            <div class="box_header">
+                <h2>Project Activity</h2>
+                <div class="icon">
+                    <i class="fal fa-minus"></i>
+                    <i class="fal fa-times"></i>
+                </div>
+            </div>
+            <div class="box_menu">
+                <button class="btnglobal">month</button>
+                <button class="btnglobal">range</button>
+                <button class=" btnglobal active_blue" id="lastrr" name="vooooo">last</button>
+                <button class="btnglobal active_red">current</button>
+                <button class="btnglobal">today</button>
+            </div>
+            <div class="box_body">
+                <img src="images/Graphs.png" alt="">
+                
+
+            </div>
+
+        </div>
+        <div class="box nonemen">
+            <div class="box_header">
+                <h2> Involved Team</h2>
+                <div class="icon">
+                    <i class="fal fa-minus"></i>
+                    <i class="fal fa-times"></i>
+                </div>
+            </div>
+
+            <div class="box_body">
+                <div class="row">
+                    <img src="images/Pic.png" alt="">
+                    <div class="team_person">
+                        <a href="#">jack williams <span>UI/UX designer</span></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <img src="images/Pic2.png" alt="">
+                    <div class="team_person">
+                        <a href="#">kate beckinsale <span>project manager</span></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <img src="images/Pic3.png" alt="">
+                    <div class="team_person">
+                        <a href="#">mickey thompson <span>developer</span></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <img src="images/Pic4.png" alt="">
+                    <div class="team_person">
+                        <a href="#">brian deegan <span>web designer</span></a>
+                    </div>
+                </div>
+                <button class="pius">add teammate</button>
+            </div>
+        </div>
+        <div class="box mang_activ">
+            <div class="box_header">
+                <h2>mangers activity</h2>
+                <div class="icon">
+                    <i class="fal fa-minus"></i>
+                    <i class="fal fa-times"></i>
+                </div>
+            </div>
+            <div class="box_menu">
+                <button class="btnglobal">february</button>
+                <button class="btnglobal">incoming phone calls</button>
+                <a href="#">total: <span><span>23</span>574</span></a>
+            </div>
+            <div class="box_body">
+                <img src="images/Activity.png" alt="">
+            </div>
+        </div>
+        <div class="box visits">
+            <div class="box_header">
+                <h2>visits</h2>
+                <div class="icon">
+                    <i class="fal fa-minus"></i>
+                    <i class="fal fa-times"></i>
+                </div>
+            </div>
+            <div class="box_menu">
+                <button class="btnglobal">webpage</button>
+                <button class="btnglobal">today</button>
+                <a href="#">conversion: <span>31%</span></a>
+            </div>
+            <div class="box_body">
+                <img src="images/CircleBars.png" alt="">
+            </div>
+        </div>
+        
+        <div class="box messagesbox">
+            <div class="box_header">
+                <h2>messages</h2>
+                <div class="icon">
+                    <i class="fal fa-minus"></i>
+                    <i class="fal fa-times"></i>
+                </div>
+            </div>
+            <div class="box_body">
+                <div class="row reciveme">
+                    <div class="wrap">
+                        <img class="ava" src="images/Pic2.png" alt="">
+                        <div class="resmessag">
+                            <p>Yea, i did not see you before. I'm ok. So, how
+                                do you feel when you use your UI?
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="showtime"> <span>16:48, 22 October, 2015 </span> </div>
+                </div>
+
+                <div class="row sendme ">
+                    <div class="wrap">
+                        <img class="ava" src="images/Pic3.png" alt="">
+                        <div class="sendmessag">
+                            <p> Hi! Obsess over customers: when given the
+                                choice between obsessing over competitors
+                                or customers, always obsess over customers.
+                                Start with customers and work backward.”
+                                Jeff Bezos. Pretty cool =)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="showtime"> <span>12 minutes ago</span> </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="box implement">
+            <div class="box_header">
+                <h2>implementation</h2>
+                <div class="icon">
+                    <i class="fal fa-minus"></i>
+                    <i class="fal fa-times"></i>
+                </div>
+            </div>
+
+            <div class="box_body">
+                <table>
+                    <thead>
+                        <th>date</th>
+                        <th>description</th>
+                        <th>balance</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>16 August <span class="dateday">Saturday</span></td>
+                            <td>recharge</td>
+                            <td>
+                                <p class="active_green">+234$</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>14 August <span class="dateday">thusday</span></td>
+                            <td>recharge</td>
+                            <td>
+                                <p class="active_red">-175$</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>12 August <span class="dateday">tuseday</span></td>
+                            <td>recharge</td>
+                            <td>
+                                <p class="active_red">-3 920$</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>11 August <span class="dateday">monday</span></td>
+                            <td>recharge</td>
+                            <td>
+                                <p class="active_green">+764$</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="box client_activity">
+            <div class="box_header">
+                <h2>client activity</h2>
+                <div class="icon">
+                    <i class="fal fa-minus"></i>
+                    <i class="fal fa-times"></i>
+                </div>
+            </div>
+
+            <div class="box_body">
+                <table>
+                    <thead>
+                        <th>user</th>
+                        <th>visits</th>
+                        <th>purchases</th>
+                        <th>calls</th>
+                        <th>total profit</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="vbv"><img class="tablepic" src="images/Pic01.png" alt=""> angelina vitale</td>
+                            <td>287</td>
+                            <td>34</td>
+                            <td>52</td>
+                            <td class="result">5 946$</td>
+                        </tr>
+                        <tr>
+                            <td class="vbv"><img class="tablepic" src="images/Pic02.png" alt="">edmonia lewis</td>
+                            <td>159</td>
+                            <td>12</td>
+                            <td>252</td>
+                            <td class="result">1 039$</td>
+                        </tr>
+                        <tr>
+                            <td class="vbv"><img class="tablepic" src="images/Pic03.png" alt="">lawanda anderson</td>
+                            <td>94</td>
+                            <td>3</td>
+                            <td>28</td>
+                            <td class="result">205$</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="vacccc" class="box mail_activ">
+            <div class="box_header">
+                <h2>mail</h2>
+                <div class="icon">
+                    <i class="fal fa-minus minimize"></i>
+                    <i class="fal fa-times windclose"></i>
+                </div>
+            </div>
+            <div class="box_body" id="tereee">
+                <div class="mail_dash">
+                    <div class="dashlogo active_blue">
+                        <img src="images/Pic.png" alt="">
+                        <div class="user_idn">
+                            <h4>jack williams</h4>
+                            <a href="mailto: mrsabry134@gmail.com">abc@example.com</a>
+                        </div>
+                    </div>
+                    <div class="box_menu">
+                        <button class="active_red newmail"> new</button>
+                    </div>
+                    <div class="maildashcont">
+                        <ul>
+                            <li><a href="#"><i class="fal fa-inbox"></i> inbox <span class="notif"
+                                        note-data="9"></span></a></li>
+                            <li><a href="#"><i class="fal fa-envelope"></i> send mail</a></li>
+                            <li><a href="#"><i class="fal fa-star"></i> important <span class="notif"
+                                        note-data="2"></span></a></li>
+                            <li><a href="#"><i class="fal fa-drafting-compass"></i> drafts</a></li>
+                            <li><a href="#"><i class="fal fa-trash-alt"></i> trash</a></li>
+                        </ul>
+                        <ul>
+                            <li class="menu_moretogall" >labels</li>
+                            <li><a href="#"><i class="circlblu"></i> work</a></li>
+                            <li><a href="#"><span class="circlgre"></span> family</a></li>
+                            <li><a href="#"><span class="circlre"></span> friends</a></li>
+                        </ul>
+                    </div>
+                    <!-- ___________________________ -->
+                </div>
+
+
+                <div class="inbox_container">
+                    <div class="dashlogo active_green ">
+                        <h4>inbox</h4>
+                        <div class="search">
+                            <form action="">
+                                <input type="search" name="search" id="0search" class="search" placeholder="search ..."
+                                    required>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="box_menu">
+                        <button class="btnglobal noneselect"> <input type="checkbox" name="all" id="">all</button>
+
+
+                        <button class="btnglobal">mark</button>
+                        <button class="btnglobal">move</button>
+                        <button class="btnglobal">show</button>
+                        <div class="pang">
+                            <h4>1-50 of 471</h4>
+                            <div class="ico">
+                                <i class="fal fa-angle-left"></i>
+                                <i class="fal fa-angle-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inbox_wrap">
+                        <table class="bo">
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">mansion tech</td>
+                                <td class="td4">new tasks</td>
+                                <td class="timeee">11:48 am</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">blurpix studio</td>
+                                <td class="td4">hi man, how are you?</td>
+                                <td class="timeee">sep 19</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">facebook</td>
+                                <td class="td4">Lorem ipsum dolor sit.</td>
+                                <td class="timeee">sep 17</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">twitter</td>
+                                <td class="td4">Lorem ipsum dolor sit amet consectetur.</td>
+                                <td class="timeee">sep 16</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">virtual box</td>
+                                <td class="td4">donald markus and his story.</td>
+                                <td class="timeee">sep 09</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">Apple Wision</td>
+                                <td class="td4">Hello, where are you?</td>
+                                <td class="timeee">Aug 28</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">Max Drone</td>
+                                <td class="td4">Boxoffice and paper docs</td>
+                                <td class="timeee">Aug 27</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">Timeweb</td>
+                                <td class="td4">Financial statistic</td>
+                                <td class="timeee">Aug 22</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star "></i></td>
+                                <td class="td3">Bill Markel</td>
+                                <td class="td4">Client Activity Status</td>
+                                <td class="timeee">Aug 14</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">mansion tech</td>
+                                <td class="td4">new tasks</td>
+                                <td class="timeee">11:48 am</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">blurpix studio</td>
+                                <td class="td4">hi man, how are you?</td>
+                                <td class="timeee">sep 19</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">facebook</td>
+                                <td class="td4">Lorem ipsum dolor sit.</td>
+                                <td class="timeee">sep 17</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">twitter</td>
+                                <td class="td4">Lorem ipsum dolor sit amet consectetur.</td>
+                                <td class="timeee">sep 16</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">virtual box</td>
+                                <td class="td4">donald markus and his story.</td>
+                                <td class="timeee">sep 09</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">Apple Wision</td>
+                                <td class="td4">Hello, where are you?</td>
+                                <td class="timeee">Aug 28</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">Max Drone</td>
+                                <td class="td4">Boxoffice and paper docs</td>
+                                <td class="timeee">Aug 27</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">Timeweb</td>
+                                <td class="td4">Financial statistic</td>
+                                <td class="timeee">Aug 22</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star "></i></td>
+                                <td class="td3">Bill Markel</td>
+                                <td class="td4">Client Activity Status</td>
+                                <td class="timeee">Aug 14</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">mansion tech</td>
+                                <td class="td4">new tasks</td>
+                                <td class="timeee">11:48 am</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">blurpix studio</td>
+                                <td class="td4">hi man, how are you?</td>
+                                <td class="timeee">sep 19</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">facebook</td>
+                                <td class="td4">Lorem ipsum dolor sit.</td>
+                                <td class="timeee">sep 17</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">twitter</td>
+                                <td class="td4">Lorem ipsum dolor sit amet consectetur.</td>
+                                <td class="timeee">sep 16</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">virtual box</td>
+                                <td class="td4">donald markus and his story.</td>
+                                <td class="timeee">sep 09</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">Apple Wision</td>
+                                <td class="td4">Hello, where are you?</td>
+                                <td class="timeee">Aug 28</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">Max Drone</td>
+                                <td class="td4">Boxoffice and paper docs</td>
+                                <td class="timeee">Aug 27</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">Timeweb</td>
+                                <td class="td4">Financial statistic</td>
+                                <td class="timeee">Aug 22</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star "></i></td>
+                                <td class="td3">Bill Markel</td>
+                                <td class="td4">Client Activity Status</td>
+                                <td class="timeee">Aug 14</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">mansion tech</td>
+                                <td class="td4">new tasks</td>
+                                <td class="timeee">11:48 am</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">blurpix studio</td>
+                                <td class="td4">hi man, how are you?</td>
+                                <td class="timeee">sep 19</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">facebook</td>
+                                <td class="td4">Lorem ipsum dolor sit.</td>
+                                <td class="timeee">sep 17</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">twitter</td>
+                                <td class="td4">Lorem ipsum dolor sit amet consectetur.</td>
+                                <td class="timeee">sep 16</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">virtual box</td>
+                                <td class="td4">donald markus and his story.</td>
+                                <td class="timeee">sep 09</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">Apple Wision</td>
+                                <td class="td4">Hello, where are you?</td>
+                                <td class="timeee">Aug 28</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">Max Drone</td>
+                                <td class="td4">Boxoffice and paper docs</td>
+                                <td class="timeee">Aug 27</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">Timeweb</td>
+                                <td class="td4">Financial statistic</td>
+                                <td class="timeee">Aug 22</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star "></i></td>
+                                <td class="td3">Bill Markel</td>
+                                <td class="td4">Client Activity Status</td>
+                                <td class="timeee">Aug 14</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">mansion tech</td>
+                                <td class="td4">new tasks</td>
+                                <td class="timeee">11:48 am</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">blurpix studio</td>
+                                <td class="td4">hi man, how are you?</td>
+                                <td class="timeee">sep 19</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">facebook</td>
+                                <td class="td4">Lorem ipsum dolor sit.</td>
+                                <td class="timeee">sep 17</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">twitter</td>
+                                <td class="td4">Lorem ipsum dolor sit amet consectetur.</td>
+                                <td class="timeee">sep 16</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">virtual box</td>
+                                <td class="td4">donald markus and his story.</td>
+                                <td class="timeee">sep 09</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">Apple Wision</td>
+                                <td class="td4">Hello, where are you?</td>
+                                <td class="timeee">Aug 28</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">Max Drone</td>
+                                <td class="td4">Boxoffice and paper docs</td>
+                                <td class="timeee">Aug 27</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">Timeweb</td>
+                                <td class="td4">Financial statistic</td>
+                                <td class="timeee">Aug 22</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star "></i></td>
+                                <td class="td3">Bill Markel</td>
+                                <td class="td4">Client Activity Status</td>
+                                <td class="timeee">Aug 14</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">mansion tech</td>
+                                <td class="td4">new tasks</td>
+                                <td class="timeee">11:48 am</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">blurpix studio</td>
+                                <td class="td4">hi man, how are you?</td>
+                                <td class="timeee">sep 19</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">facebook</td>
+                                <td class="td4">Lorem ipsum dolor sit.</td>
+                                <td class="timeee">sep 17</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">twitter</td>
+                                <td class="td4">Lorem ipsum dolor sit amet consectetur.</td>
+                                <td class="timeee">sep 16</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">virtual box</td>
+                                <td class="td4">donald markus and his story.</td>
+                                <td class="timeee">sep 09</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">Apple Wision</td>
+                                <td class="td4">Hello, where are you?</td>
+                                <td class="timeee">Aug 28</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">Max Drone</td>
+                                <td class="td4">Boxoffice and paper docs</td>
+                                <td class="timeee">Aug 27</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">Timeweb</td>
+                                <td class="td4">Financial statistic</td>
+                                <td class="timeee">Aug 22</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star "></i></td>
+                                <td class="td3">Bill Markel</td>
+                                <td class="td4">Client Activity Status</td>
+                                <td class="timeee">Aug 14</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">mansion tech</td>
+                                <td class="td4">new tasks</td>
+                                <td class="timeee">11:48 am</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">blurpix studio</td>
+                                <td class="td4">hi man, how are you?</td>
+                                <td class="timeee">sep 19</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">facebook</td>
+                                <td class="td4">Lorem ipsum dolor sit.</td>
+                                <td class="timeee">sep 17</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">twitter</td>
+                                <td class="td4">Lorem ipsum dolor sit amet consectetur.</td>
+                                <td class="timeee">sep 16</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">virtual box</td>
+                                <td class="td4">donald markus and his story.</td>
+                                <td class="timeee">sep 09</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">Apple Wision</td>
+                                <td class="td4">Hello, where are you?</td>
+                                <td class="timeee">Aug 28</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">Max Drone</td>
+                                <td class="td4">Boxoffice and paper docs</td>
+                                <td class="timeee">Aug 27</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">Timeweb</td>
+                                <td class="td4">Financial statistic</td>
+                                <td class="timeee">Aug 22</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star "></i></td>
+                                <td class="td3">Bill Markel</td>
+                                <td class="td4">Client Activity Status</td>
+                                <td class="timeee">Aug 14</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">mansion tech</td>
+                                <td class="td4">new tasks</td>
+                                <td class="timeee">11:48 am</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">blurpix studio</td>
+                                <td class="td4">hi man, how are you?</td>
+                                <td class="timeee">sep 19</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">facebook</td>
+                                <td class="td4">Lorem ipsum dolor sit.</td>
+                                <td class="timeee">sep 17</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">twitter</td>
+                                <td class="td4">Lorem ipsum dolor sit amet consectetur.</td>
+                                <td class="timeee">sep 16</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">virtual box</td>
+                                <td class="td4">donald markus and his story.</td>
+                                <td class="timeee">sep 09</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">Apple Wision</td>
+                                <td class="td4">Hello, where are you?</td>
+                                <td class="timeee">Aug 28</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">Max Drone</td>
+                                <td class="td4">Boxoffice and paper docs</td>
+                                <td class="timeee">Aug 27</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star"></i></td>
+                                <td class="td3">Timeweb</td>
+                                <td class="td4">Financial statistic</td>
+                                <td class="timeee">Aug 22</td>
+                            </tr>
+                            <tr class="bio">
+                                <td class="check"><input type="checkbox" name="" id=""></td>
+                                <td class="starr"><i class="fal fa-star "></i></td>
+                                <td class="td3">Bill Markel</td>
+                                <td class="td4">Client Activity Status</td>
+                                <td class="timeee">Aug 14</td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- __________________________js files________________________________ -->
+
+    <script>
+        function openmenu(x) {
+            x.classList.toggle("togglemenu");
+        }
+    </script>
+    <!-- <script src="package/dist/chart.js"></script> -->
+    <!-- <script>
+        var drop = document.querySelectorAll(".menu_moretogall");
+
+               
+               
+        drop.forEach(function(item) {
+            item.addEventListener('click', function() {
+                // item.style.display = 'none';
+                // item.style.backgroundColor = 'red';
+                let dooopa = item.parentNode;
+                
+                
+                  
+                if(dooopa.offsetWidth > 0 || dooopa.offsetHeight > 0){
+
+                    dooopa.style.display = 'none';
+}
+else {
+    dooopa.style.display = 'block';
+}
+            });
+               
+
+                
+
+            });
+       
+       
+        
+       
+    </script> -->
+    <!-- <script src="js/main.js"></script>          addEventListener('click', myfunction) -->
+    <script>
+         var tst= document.getElementsByClassName('menu_moretogall')
+        test.addEventListener('click',
+
+        function(item) {
+            let dooopa = item.parentNode;
+            var g = document.getElementById('godd');
+            var myNodList = tst.parentNode.querySelectorAll('li');
+
+            
+      
+    
+
+
+
+        } )
+
+    </script>
+</body>
+
+</html>

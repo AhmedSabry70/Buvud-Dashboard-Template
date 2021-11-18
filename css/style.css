@@ -1,0 +1,1121 @@
+
+:root{
+    --font-color : #e4ebf7;
+    --maincolor : #f2f7fd;
+    --sec-color : #1b2033;
+    --minus-color : #f55b63;
+    --light-color : #54a6de;
+    --active-color : #57c059;
+
+    --padding-stander : 15px;
+
+}
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: rgb(44, 43, 43);
+    
+    border-radius: 5px 5px 5px 5px;
+  }
+  
+/*____________________ global rules_____________________ */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+  }
+body{
+    font-family: 'Cairo', sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: var(--sec-color);
+    background-color: var(  --font-color);
+}
+i{
+
+    color: black;
+    padding:0 5px;
+    margin:0 3px;
+    display: flex;
+}
+ul {list-style: none;}
+a { text-decoration: none;}
+html {scroll-behavior: smooth;}
+h1,h2,h3,h4,h5,h6 { padding: 0;  margin: 0;}
+
+.container{
+    /* padding: 0 15px; */
+    margin: 0 var(--padding-stander);
+}
+
+/*____________________ end global rules_____________________ */
+/* __________________start components___________________ */
+
+button{
+    margin: 10px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    text-align: left;
+    line-height: 16px;
+    display: block;
+    background-color: transparent;
+    max-width: 100%;
+    text-transform: capitalize;
+}
+.btnglobal{
+    border: 1px solid var(--sec-color);
+}
+.btnglobal:last-child{
+
+    margin-right: 0;
+}
+.btnglobal:first-child{
+    margin-left: 0;
+}
+button.btnglobal::after{
+    content: "\f107";
+    font-family: "Font Awesome 5 Pro";
+    display: inline-block;
+    padding-left:8px;
+}
+button.btnglobal:hover{
+    opacity: .8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.315);
+}
+
+button.pius{
+color:var(--font-color);
+}
+button.pius::after {
+    content: "\f067";
+    font-family: "Font Awesome 5 Pro";
+    display: inline-block;
+    padding-left:8px;
+    
+}
+.active_blue{
+    background-color: var(--light-color);
+    border: none;
+    color: var(--font-color);
+}
+.active_green{
+    background-color: var(--active-color);
+    border: none;
+    color: var(--font-color);
+}
+.active_red{
+    background-color: var(--minus-color);
+    border: none;
+    color: var(--font-color);
+}
+
+.color_red{
+    color: var(--minus-color);
+}
+
+.tooltip{
+    background-color: #515974;
+}
+
+
+.box{
+    background-color: var(--maincolor);
+   
+    margin: var(--padding-stander) 0 ;
+    box-shadow: 0 0 10px rgba(204, 204, 204, 0.575);
+}
+.box:hover{
+    
+    box-shadow: 0 0 15px rgba(128, 128, 128, 0.795);
+    box-shadow: 0 0 22px rgba(204, 204, 204, 0.829);
+    box-shadow: 0 0 26px rgba(204, 204, 204, 0.918);
+}
+.box .box_header{
+    display: flex;
+    justify-content: space-between;
+    height: 67px;
+    line-height: 67px;
+    text-transform: capitalize;
+    border-bottom: 1px solid #ccc;
+    padding: 0 20px;
+}
+
+.box .box_header h2{
+    font-size: 16px;
+}
+.box .box_menu{
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+
+}
+
+.box .box_body{
+    padding: 20px;
+}
+
+/* ___________________end components____________________ */
+
+/* ____________________start header___________________ */
+header{
+     width: 240px; 
+    height: 100%;
+    padding-top: var(--padding-stander);
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: 0.9s;
+    background-color: var(--sec-color);
+    color: var(--font-color);
+    text-transform: capitalize;
+    overflow-y: auto;
+
+}
+
+/* _____________________nav horizontal________________________ */
+nav.navhorz{
+    display: flex;
+    align-items: center;
+     width: calc(100% - 240px); 
+    transition: margin .9s;
+    padding: 0 40px;
+    margin: 0 0 0  240px;
+    /* margin-left: auto; */
+    height: 90px;
+    background-color: var(--maincolor);
+    border-bottom: 1px solid #CCc;
+    /*for now*/position: relative;
+    
+}
+
+nav.navhorz .search{
+    margin-right: auto;
+}
+
+.search form{
+
+    display: inline-flex;
+}
+.search form input{
+    border: none;
+    background: none;
+    display: inline-flex;
+    outline: none;
+
+}
+nav.navhorz .search form input::placeholder{
+    
+    color: var(--sec-color);
+}
+.search form input::placeholder{
+    text-transform: capitalize;
+}
+ .search::before{
+    content: "\f002";
+    font-family: "Font Awesome 5 Pro";
+    display: inline-block;
+    padding-right:8px;
+    font-size: 20px;
+    font-weight: 400;
+}
+nav.navhorz i{
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.setting_ico:hover {
+    animation: rotatecon 10s linear infinite;
+   
+    }
+
+    @keyframes rotatecon {
+        0%,100%{
+            transform: rotate( 0deg) ;
+            
+        }
+        50%{
+            transform: rotate( 1080deg) ;
+        }
+        
+    }
+nav.navhorz i.rot{
+    transform: rotate(20deg);
+}
+nav.navhorz i.rot:hover{
+    animation: sha 2s linear infinite;
+}
+@keyframes sha {
+    0%,100%{
+        transform:rotatex( 0deg);
+        
+    }
+    10%{
+        transform:rotate(-20deg);
+    }
+    20%{
+        transform:rotate(0deg);
+    }
+    30%{
+        transform:rotate(20deg);
+    }
+    40%{
+        transform:rotate(0deg);
+    }
+    50%{
+        transform:rotate(-20deg);
+    }
+    
+}
+nav.navhorz i.rot::after{
+    content: "";
+    position: absolute;
+    top: 1px;
+    right: 5px;
+    width: 10px;
+    height: 11px;
+    background-color: var(--minus-color);
+    border-radius: 50%;
+    
+
+}
+
+
+
+/* _____________________nav vertical________________________ */
+
+header .logo h2{
+    color: var(--maincolor);
+    /* margin-bottom: 20px; */
+    width: 200px;
+    font-size: 22px;
+}
+header .user_prof{
+    display: flex;
+    align-items: center;
+    margin:10px 0;
+}
+header .user_prof img{
+    width: 70px;
+    height: 70px;
+    border-radius:50%;
+}
+header .user_prof h4{
+    margin-left: 8px;
+}
+
+
+
+
+
+
+/* header .menu_icon{ */
+    header div:first-child{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 10px;
+    }
+ .menu_icon{
+  /*  position: absolute;
+    right: 20px;
+    top: 19px; 
+     left: 20px;
+    top: 19px; */
+    cursor: pointer;   
+    margin-right: 8px;
+}
+/* header .menu_icon span{ */
+.menu_icon span{
+    width: 20px;
+    height: 2px;
+    /* background-color: var(--sec-color); */
+     background-color: var(--font-color); 
+    display: block;
+    margin: 5px 0;
+    transition: all 0.5s ease-in-out;
+}
+/*header*/  .togglemenu  span:nth-child(1){
+    transform: rotate(45deg) translate(3px, 3px);
+}
+
+/*header*/  .togglemenu  span:nth-child(2){
+    opacity: 0;
+}
+/*header*/  .togglemenu  span:nth-child(3){
+    transform: rotate( -45deg) translate(7px, -7px);
+}
+
+nav{
+    margin-top: var(--padding-stander);
+}
+
+nav .main ul li{
+    position: relative;
+    display: block;
+}
+ul li{
+    position: relative;
+    display: block;
+}
+
+ul li:not(.menu_moretogall):hover::before{
+    content: "";
+    height: 100%;
+    width:2px;
+    position: absolute;
+    background: var(--minus-color);
+}
+
+ul li.menu_moretogall{
+    padding: 15px 15px;
+    cursor: pointer;
+    position: relative;
+    opacity: 0.4;
+}
+ul li.menu_moretogall::after{
+    content: "\f107";
+    font-family: "Font Awesome 5 Pro";
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+}
+.menu_moretogallactive:after {
+    content: "\f067"; /* Unicode character for "minus" sign (-) */
+  }
+nav ul li a{
+    color: var(--font-color);
+}
+nav ul li a{
+    display: block;
+    padding-left: 20px;
+    line-height: 60px;
+    
+}
+
+nav ul li a i{
+    color: var(--font-color);
+}
+ul li a i{
+    padding-right: 10px;
+    
+}
+nav ul li a:hover{
+   background-color: #0c1224;
+}
+
+
+.settinpopbx{
+    
+    background-color: var(--maincolor);
+    color:rgba(17, 17, 17, 0.589);
+    position: absolute;
+    right: 300px;
+    top:96px;
+    padding: 10px;
+    padding-right: 15px;
+    /* font-size: 14px; */
+    border-radius: 4px;
+    border:0.5px solid #ffffffaf;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.37);
+}
+
+.settinpopbx a{
+    display: flex;
+    align-items: center;
+    color: #515974;
+    padding-bottom: 20px;
+
+}
+.notificpopbx a:hover,
+.settinpopbx a:hover{
+    opacity: .7;
+}
+.settinpopbx a:hover  i.logouti{
+    color: red;
+    filter: hue-rotate(15deg);
+    transition:filter 2s ease-in-out;
+    opacity: 1;
+}
+
+.settinpopbx a:hover i.setting_ico{
+    animation: rotatecon 10s linear infinite;
+    opacity: 1;
+}
+
+
+
+.notificpopbx{
+    width: 250px;
+    height: 250px;
+    background-color: var(--maincolor);
+    color:rgba(17, 17, 17, 0.589);
+    position: absolute;
+    right: 40px;
+    top:96px;
+    padding: 20px;
+    /* font-size: 14px; */
+    
+    border:0.5px solid #ffffffaf;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.37);
+}
+.notificpopbx p{
+   margin-bottom: 10px;
+   font-size: 14px;
+   letter-spacing: 1px;
+   text-transform: capitalize;
+}
+.contnotiscor{
+    overflow-y: auto;
+    max-height: 100%;
+}
+.notificpopbx a{
+    color: #515974;
+    padding: 10px 5px;
+    display: flex;
+    font-size: 14px;
+    font-weight: bold;
+   
+    
+}
+.notificpopbx a i{
+    margin: 0 10px;
+    font-size: 20px;
+    color: #111;
+    padding: 5px;
+    height: 100%;
+    color: #111;
+    border-radius: 5px;
+    font-size: 20px;
+}
+.notificpopbx a i.erroric{  
+background-color: var(--minus-color); 
+}
+.notificpopbx a i.config{
+    background-color: var(--active-color);
+}
+
+.notificpopbx a i.userpic{
+    background-color: var(--light-color);
+}
+
+.notificpopbx div h6{
+    padding: 0 0 5px;
+    font-size: 14px;
+}
+.notificpopbx div p{
+    font-weight: 300;
+}
+   
+/* ____________________end header___________________ */
+
+
+
+
+/* ____________((&&&&&&&%^%$%$%$% #bar-charts           ,))*&*$%#%$#$^##___________ */
+
+
+.cartp22,
+        .cartpi1,
+        .cartpi {
+            width: 120px;
+            height: 120px;
+            /* background: crimson; */
+            position: relative;
+        }
+
+        .outer,
+        .cartpi1 .outer,
+        .cartp22 .outer {
+            height: 120px;
+            width: 120px;
+            border-radius: 50%;
+            /* border: 1px solid red; */
+            padding: 20px;
+            box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+        }
+
+        .inner,
+        .cartpi1 .inner,
+        .cartp22 .inner {
+            height: 80px;
+            width: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+
+            box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+                inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+                -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+                0.5px 0.5px 0px rgba(255, 255, 255, 0.15),
+                0px 12px 10px -10px rgba(255, 255, 255, 0.05);
+
+        }
+
+        #number {
+            font-weight: 600px;
+            color: #555;
+        }
+
+        #number span {
+            display: block;
+        }
+
+        circle {
+            fill: none;
+            stroke: url(#GradientColor);
+            stroke-width: 20px;
+            stroke-dasharray: 0;
+            stroke-dashoffset: 300;
+            /* stroke-linecap: square; */
+
+            animation: chartani 4s linear forwards;
+
+
+        }
+
+        svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+
+        @keyframes chartani {
+            100% {
+                stroke-dashoffset: -50;
+                stroke-dasharray: 300;
+
+            }
+        }
+
+
+
+
+        circle.cartpi1111 {
+            fill: none;
+            stroke: url(#adientColor);
+            stroke-width: 20px;
+            stroke-dasharray: 0;
+            stroke-dashoffset: 300;
+            /* stroke-linecap: square; */
+
+            animation: cartpi1 4s linear forwards;
+
+
+        }
+
+        @keyframes cartpi1 {
+            100% {
+                stroke-dashoffset: 100;
+                stroke-dasharray: 300;
+
+            }
+        }
+
+        circle.cartp2222 {
+            fill: none;
+            stroke: url(#Grolor);
+            stroke-width: 20px;
+            stroke-dasharray: 0;
+            stroke-dashoffset: 300;
+            /* stroke-linecap: square; */
+
+            animation: cartp22 4s linear forwards;
+
+
+        }
+
+        @keyframes cartp22 {
+            100% {
+                stroke-dashoffset: 170;
+                stroke-dasharray: 300;
+
+            }
+        }
+
+        .cartp22 svg {
+            transform: rotate(35deg);
+        }
+        .chartcircu{
+            margin: 10px;
+            padding: 10px;
+        }
+/* ________________________start main____________________________                             */
+
+
+main{
+    margin-left:240px ; 
+    transition: margin-left .9s;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding:0 var(--padding-stander);
+    
+    
+}
+main .proj_activ .box_menu button:last-child {
+    margin-left: auto;
+}
+/* main .proj_activ */.box_body> img{ 
+    max-width: 100%;
+    width: 100%;
+}
+
+
+
+main .nonemen .box_body .row{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-transform: capitalize;
+    flex-basis: 20%;
+ }
+ main .nonemen .box_body .row img{
+    margin-right: 10px;
+    width: 80px;
+    height: 80%;
+    border-radius: 50%;
+ }
+ main .nonemen .box_body .row .team_person{
+     padding: 20px;
+ }
+ main .nonemen .box_body .row .team_person a{
+     color: var(--sec-color);
+     display: block;
+     font-weight: bold;
+ }
+ main .nonemen .box_body .row .team_person span{
+     padding: 5px 0;
+     display: block;
+     color: #444444e8;
+     font-weight: 300;
+ }
+ main .nonemen .box_body .row .team_person a:hover{
+     opacity: .6;
+ }
+ main  .nonemen .box_body button{
+     background: var(--active-color);
+     margin: 10px auto;
+ }
+ main  .nonemen .box_body button:hover{
+    transform: translatey(2px);
+    box-shadow: 0 0 5px #000;
+    color: #fff;
+ }
+
+
+
+
+ main .mang_activ > .box_body{
+    display: flex;
+    align-items: stretch;
+ }
+/* main .mang_activ*/ .box_menu a{
+     color: var(--sec-color);
+     margin-left: auto;
+     display: flex;
+     font-weight: bold;
+ }
+/* main .mang_activ */.box_menu a span:first-child{
+     color: var(--minus-color);
+     padding: 0 5px;
+     display: flex;
+ }
+ /*main .mang_activ*/ .box_menu a:hover{
+     opacity: .7;
+ }
+
+
+
+
+ main .box.proj_activ{
+    width:100%;
+}
+main .box.nonemen{
+    width:32%;
+}
+main .box.mang_activ{
+    width:67%;
+ }
+main .box.visits{
+    width:58%;
+}
+main .box.visits .box_body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ main .box.messagesbox{
+    width:41%;
+ }
+ main .box.implement{
+    width:49.5%;
+ }
+ main .box.client_activity{
+    width:49.5%;
+ }
+ main .box.mail_activ{
+    width:100%;
+ }
+ /* __________________________messages box___________ */
+
+ main .messagesbox .box_body .row {
+     margin: 30px 0;
+ } 
+ main .messagesbox .box_body  .wrap {
+    display: flex;
+    align-items: center;
+}
+ .box_body .sendme .wrap {
+    flex-direction: row-reverse;
+}
+main .messagesbox .box_body .sendme .sendmessag{
+    background: #e1e7f0;
+    margin-right: 10px;
+    position: relative;
+ }
+ main .messagesbox .box_body .sendme .sendmessag::before{
+    content: "";
+    border-style: solid;
+    border-width: 10px;
+    border-color: transparent  transparent transparent #e1e7f0;
+    position: absolute;
+    top: 50%;
+    right: -16px;
+    transform: translateY(-50%);
+   
+ }
+ 
+ main .messagesbox .box_body .reciveme .resmessag {
+     position: relative;
+     background: #57c059;
+     margin-left: 10px;
+     border-radius: 5px;
+ }
+ main .messagesbox .box_body .reciveme .resmessag::before{
+    content: "";
+    border-style: solid;
+    border-width: 10px;
+    border-color: transparent var(--active-color) transparent transparent;
+    position: absolute;
+    top: 50%;
+    left: -16px;
+    transform: translateY(-50%);
+ }
+ main .messagesbox .box_body .row p{
+    padding: 10px 15px;
+    
+ }
+ main .messagesbox .box_body .row .ava{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    
+ }
+ main .box_body .reciveme .showtime{
+    text-align: right;
+}
+ main .box_body .showtime{
+     width: 100%;
+ }
+ main .box_body .showtime span{
+     display: block;
+     width: 100%;
+     padding: 10px 0;
+     opacity: .5;
+ }
+ 
+ 
+ .implement .box_body{
+
+   padding: 0 20px 15px;
+ }
+table{
+    width: 100%;
+    border-collapse: collapse;
+    text-transform: capitalize;
+    margin: 0;
+}
+th,thead{
+    height: 67px;
+    line-height: 67px;
+    padding: 0 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    margin-left: -10px;
+    background-color: var(--main-color);
+
+}
+ td {
+    /* border-bottom: 1px solid #ccc; */
+   
+    text-align: left;
+    height: 100px;
+    vertical-align:middle;
+    padding: 0 20px;
+    position: relative;
+}
+ td::after {
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    width: 90%;
+    height: 3px;
+    background-color: #1b2033;
+}
+tr:hover {background-color: #8d8d8d38}
+tr{
+    margin: 0 20px;
+    padding: 0 20px;
+    position: relative;
+}
+td span{
+    display: block;
+}
+td p{
+    display: block;
+    border-radius: 40px;
+    padding: 15px 20px;
+    width: fit-content;
+    font-size: 20px;
+    font-weight: bold;
+}
+.tablepic{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right:10px ;
+}
+.vbv{
+    display: flex;
+    align-items: center;
+    
+}
+.result{
+    color: var(--active-color);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+/* ____________________________mail_activ_______________-________ */
+.mail_activ .box_body {
+    padding: 0;
+    display: flex;
+    
+}
+.mail_activ .box_body .mail_dash{
+    width: 200px;
+    border-right: 1px solid #ccc;
+}
+/* ____________________stander________________ */
+.mail_activ .box_body  .dashlogo{
+    display: flex;
+    align-items: center;
+    color: var(--font-color);
+    height: 70px;
+    padding: 20px;
+    
+}
+.mail_activ .box_body .mail_dash .dashlogo img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 10px 10px 10px 0;
+}
+.mail_activ .box_body .mail_dash .dashlogo a{
+    color: inherit;
+    font-size: 14px;
+    opacity: .5;
+    max-width: 100%;
+}
+.mail_activ .box_body .mail_dash .dashlogo a:hover{
+    
+    opacity: 1;
+}
+/*stander*/ .mail_activ .box_body  .box_menu {
+    border-bottom: solid 1px #ccc;
+    height: 60px;
+    
+}
+.mail_activ .box_body .mail_dash .box_menu .newmail{
+    padding: 8px 60px;
+    text-align: center;
+    margin:  auto;
+    cursor: pointer;
+}
+.mail_activ .box_body .mail_dash .box_menu .newmail:hover{
+    color:#fff;
+    opacity:.8;
+}
+.mail_activ .box_body .mail_dash .maildashcont li a{
+    padding: 20px;
+    display: block;
+    color: var(--sec-color);
+    font-weight: 500;
+}
+.mail_activ .box_body .mail_dash .maildashcont li a:hover{
+    padding: 20px;
+    display: block;
+    background-color: var(--font-color);
+}
+.maildashcont li{
+    position: relative;
+}
+.notif{
+    padding: 13px;
+    border-radius: 50px;
+    background-color: var(--minus-color);
+    position: absolute;
+    top: 50%;
+    right: 28px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.notif:hover{
+    opacity: .8;
+ }
+.notif::after{
+    content: attr(note-data);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--font-color);
+}
+.circlblu{
+    border: 2px solid var(--light-color);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    margin-right: 10px;
+    display: inline-flex;
+}
+.circlgre{
+    border: 2px solid var(--active-color);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    margin-right: 10px;
+    display: inline-flex;
+}
+.circlre{
+    border: 2px solid var(--minus-color);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    margin-right: 10px;
+    display: inline-flex;
+}
+
+
+
+
+
+.inbox_container{
+    width: calc(100% - 200px);
+    border-right: 1px solid #ccc;
+    max-height: 917px;
+    overflow: auto;
+}
+
+
+.mail_activ .box_body .inbox_container  .dashlogo{
+    justify-content: space-between;
+    color:var(--font-color)
+}
+
+.mail_activ .inbox_container .dashlogo .search {
+    background-color: rgba(255, 255, 255, 0.37);
+    padding:5px 10px ;
+    border-radius: 50px;
+}
+
+.mail_activ .inbox_container .search form input::placeholder{
+    color: var(--font-color);
+    z-index: 10;
+}
+.noneselect input{
+ margin-right: 10px;
+}
+.btnglobal.noneselect::after{
+    content: "";
+}
+.mail_activ .inbox_container .btnglobal:nth-child(4){
+    margin-left: auto;
+}
+.mail_activ .inbox_container .pang{
+    display: flex;
+    align-items: center;
+   
+}
+.mail_activ .inbox_container .pang .ico {
+    margin-left: 5px;
+}
+.mail_activ .inbox_container .pang .ico i{
+    padding-left: 13px;
+    padding-right: 13px;
+    border: 1px solid #777;
+    border-radius: 50%;
+    font-size: 25px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+.mail_activ .inbox_container .pang .ico i:hover{
+    border: none;
+    background-color: #fff;
+}
+
+.mail_activ .inbox_container .inbox_wrap .bo td{
+    height:50px;
+    border-bottom: 1px solid #ccc ; 
+    
+}
+.mail_activ .inbox_container .inbox_wrap .bo .check{
+    
+    width: 5%;
+}
+.mail_activ .inbox_container .inbox_wrap .bo .starr{
+    width: 5%;
+    
+}
+.mail_activ .inbox_container .inbox_wrap .bo .td3{
+    
+    width: 22%;
+}
+.mail_activ .inbox_container .inbox_wrap .bo .td4{
+    width: 50%;
+}
+.mail_activ .inbox_container .inbox_wrap .bo .timeee{
+    width: 17%;
+    
+}
+.starr:hover{
+   
+   cursor: pointer;
+}
+/* .fas.fa-star  {
+    color: rgba(255, 0, 0, 0.774);
+} */
+.box_menu.noooo{
+    display:none;
+}
